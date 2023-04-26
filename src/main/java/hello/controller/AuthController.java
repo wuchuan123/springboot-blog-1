@@ -78,8 +78,9 @@ public class AuthController {
         return LoginResult.success("注册成功", userService.getUserByUsername(username));
     }
 
+    //   在 Controller 方法开始处理请求时，Spring 会将 HttpServletRequest 对象自动赋值到方法参数中。
     @PostMapping("/auth/login")
-    @ResponseBody
+    @ResponseBody  // 表明只会返回数据 @RequestBody 前端的请求参数
     public Object login(@RequestBody Map<String, Object> usernameAndPassword, HttpServletRequest request) {
         if (request.getHeader("user-agent") == null || !request.getHeader("user-agent").contains("Mozilla")) {
             return "死爬虫去死吧";

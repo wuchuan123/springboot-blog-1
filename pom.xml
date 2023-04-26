@@ -149,7 +149,7 @@
                                 <argument>-e</argument>
                                 <argument>MYSQL_ROOT_PASSWORD=my-secret-pw</argument>
                                 <argument>-e</argument>
-                                <argument>MYSQL_DATABASE=xdml</argument>
+                                <argument>MYSQL_DATABASE=blog_spring</argument>
                                 <argument>-p</argument>
                                 <argument>3307:3306</argument>
                                 <argument>-d</argument>
@@ -195,7 +195,7 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.2.4</version>
                 <configuration>
-                    <url>jdbc:mysql://localhost:3306/xdml?useSSL=false&amp;allowPublicKeyRetrieval=true</url>
+                    <url>jdbc:mysql://localhost:3306/blog_spring?useSSL=false&amp;allowPublicKeyRetrieval=true</url>
                     <user>root</user>
                     <password>my-secret-pw</password>
                 </configuration>
@@ -207,7 +207,7 @@
                             <goal>migrate</goal>
                         </goals>
                         <configuration>
-                            <url>jdbc:mysql://localhost:3307/xdml?useSSL=false&amp;allowPublicKeyRetrieval=true</url>
+                            <url>jdbc:mysql://localhost:3307/blog_spring?useSSL=false&amp;allowPublicKeyRetrieval=true</url>
                             <user>root</user>
                             <password>my-secret-pw</password>
                         </configuration>
